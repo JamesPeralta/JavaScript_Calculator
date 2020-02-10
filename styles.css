@@ -1,0 +1,43 @@
+#screen {
+  display: flex;
+  justify-content: center;
+}
+
+#calculator {
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 600px;
+  background-color: #CECDD4;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+.row {
+  height: 50px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+#outputscreen {
+  text-align: right;
+}
+
+#inputscreen {
+  background-color: white;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  text-align: right;
+}
+
+.btn-primary {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  background-color: #B5BEFF;
+  border-color: darkblue;
+}
