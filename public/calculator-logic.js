@@ -1,5 +1,3 @@
-console.log("Hello")
-
 $(document).ready(function () {
   let entry = "";
   let result = 0
@@ -8,10 +6,17 @@ $(document).ready(function () {
       let button_click = $(this).text();
 
       if (button_click === "=") {
-        result = result + parseFloat(eval(entry).toFixed(5))
-        $("#outputscreen h1").html(entry + " = "+ result)
-        entry = ""
-        saved_result = true
+        try {
+            result = result + parseFloat(eval(entry).toFixed(5))
+            $("#outputscreen h1").html(entry + " = "+ result)
+            entry = ""
+            saved_result = true
+        }
+        catch (err) {
+            console.log("ERROR")
+            $("#outputscreen h1").html(entry + " = " + "ERROR")
+            entry = ""
+        }
       }
       else if (button_click === "C"){
         saved_result = false
@@ -19,6 +24,9 @@ $(document).ready(function () {
         result = 0
         $("#inputscreen h1").html("")
         $("#outputscreen h1").html("")
+      }
+      else if (button_click === "CE"){
+          entry = entry.substr(0, entry.length - 1)
       }
       else {
         if (saved_result && ["/", "*", "-", "+"].includes(button_click)) {
@@ -36,7 +44,6 @@ $(document).ready(function () {
           entry = entry + button_click
         }
       }
-
       $("#inputscreen h1").html(entry);
     }
   )
