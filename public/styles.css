@@ -12,11 +12,17 @@
   height: auto;
   margin: auto;
   width: 100%;
+  font-size: 20px;
 }
 
 @media only screen and (min-width: 600px) {
   #calculator {
     max-width: 600px;
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 30px;
   }
 }
 
@@ -28,10 +34,6 @@
 
 .col-md-3, .col-xs-1 {
   padding: 0 4px;
-}
-
-h1 {
-  font-size: 30px;
 }
 
 #outputscreen {
