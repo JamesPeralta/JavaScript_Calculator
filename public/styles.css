@@ -12,7 +12,15 @@
   height: auto;
   margin: auto;
   width: 100%;
+  font-size: 20px;
+}
+
+#outputscreen h1 {
   font-size: 15px;
+}
+
+#inputscreen h1 {
+  font-size: 20px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -21,14 +29,13 @@
     font-size: 30px;
   }
 
-  h1 {
+  #outputscreen h1 {
+    font-size: 22px;
+  }
+
+  #inputscreen h1 {
     font-size: 30px;
   }
-}
-
-h1 {
-  font-size: 30px;
-  overflow: hidden;
 }
 
 .row {
@@ -43,6 +50,7 @@ h1 {
 
 #outputscreen {
   text-align: right;
+  overflow: hidden;
 }
 
 #inputscreen {
@@ -51,6 +59,7 @@ h1 {
   border-width: 1px;
   border-style: solid;
   text-align: right;
+  overflow: hidden;
 }
 
 .btn-primary {
